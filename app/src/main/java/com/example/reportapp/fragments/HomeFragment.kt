@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         loadProfile()
-    }
+    } // testtttt
 
     private fun loadProfile() {
         val sharedPref = requireContext().getSharedPreferences("UserProfile", Activity.MODE_PRIVATE)
