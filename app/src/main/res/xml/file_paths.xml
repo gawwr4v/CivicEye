@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- allow camera temp files in cache and the final profile file in filesDir -->
+    <cache-path name="cache" path="." />
+    <files-path name="files" path="." />
+</paths>

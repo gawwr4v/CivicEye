@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Global app theme -->
+    <style name="Theme.ReportApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Brand colors -->
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar (default = green + white icons) -->
+        <item name="android:statusBarColor">@color/green_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation bar transparent -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- OnboardingPager theme (green + black icons) -->
+    <style name="Theme.ReportApp.OnboardingPager" parent="Theme.ReportApp">
+        <item name="android:windowLightStatusBar">true</item> <!-- black icons -->
+    </style>
+
+</resources>
