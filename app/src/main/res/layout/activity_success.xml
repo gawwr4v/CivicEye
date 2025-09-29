@@ -11,8 +11,9 @@
         android:id="@+id/checkmarkImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@android:drawable/checkbox_on_background"
-        android:alpha="0" />
+        android:src="@drawable/ic_check"
+        android:visibility="invisible" />
+
 
     <!-- Text -->
     <TextView

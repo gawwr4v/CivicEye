@@ -28,22 +28,7 @@
                 android:src="@drawable/ic_back"
                 android:contentDescription="Back" />
 
-            <!-- spacer to push skip to right -->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
 
-            <!-- TEMP Skip button -->
-            <TextView
-                android:id="@+id/tvSkipLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Skip"
-                android:textColor="@color/green_primary"
-                android:textStyle="bold"
-                android:padding="8dp"
-                android:contentDescription="Skip login" />
         </LinearLayout>
 
         <!-- Welcome Text -->
@@ -57,7 +42,7 @@
             android:textStyle="bold"
             android:layout_marginTop="24dp" />
 
-        <!-- Segmented Login / Signup placeholder -->
+        <!-- Segmented Login / Signup toggle -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -65,8 +50,32 @@
             android:background="@drawable/rounded_toggle"
             android:layout_marginTop="16dp"
             android:padding="4dp">
-            <!-- TODO: Toggle views (Login / Sign up) -->
+
+            <TextView
+                android:id="@+id/toggleLogin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Login"
+                android:textColor="@color/green_primary"
+                android:textStyle="bold"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/toggleSignup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textColor="@color/green_primary"
+                android:textStyle="bold"
+                android:background="@android:color/transparent" />
         </LinearLayout>
+
+
+
 
         <!-- Email Input -->
         <com.google.android.material.textfield.TextInputLayout
@@ -91,6 +100,21 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -156,36 +180,7 @@
                 android:background="#E0E0E0" />
         </LinearLayout>
 
-        <!-- Social buttons placeholder -->
-        <!-- Or divider -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="16dp">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#E0E0E0" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  Or  "
-                android:textColor="#888888" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#E0E0E0" />
-        </LinearLayout>
-
-        <!-- 🚨 Social login removed (because icons missing) -->
-
+        <!-- 🚨 Social login removed (icons missing) -->
 
         <!-- Signup prompt -->
         <TextView

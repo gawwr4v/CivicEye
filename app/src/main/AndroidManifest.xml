@@ -33,9 +33,7 @@
 
         <!-- Other activities you still need -->
         <activity android:name=".ReportDetailActivity" />
-        <activity android:name=".ConfirmationActivity" />
-
-
+        <activity android:name=".SuccessActivity" />
 
         <!-- FileProvider -->
         <provider
@@ -48,5 +46,6 @@
                 android:resource="@xml/file_paths"/>
         </provider>
     </application>
+
 
 </manifest>

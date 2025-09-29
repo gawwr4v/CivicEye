@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.reportapp.ReportStorage
 import com.example.reportapp.RetrofitClient
+import com.example.reportapp.SuccessActivity
 import com.example.reportapp.UploadResponse
 import com.example.reportapp.databinding.FragmentReportBinding
 import com.example.reportapp.model.Report
@@ -243,8 +244,11 @@ class ReportFragment : Fragment() {
         reports.add(0, newReport)
         ReportStorage.saveReports(requireContext(), reports)
 
-        Toast.makeText(requireContext(), "Report submitted ✅", Toast.LENGTH_SHORT).show()
+        // ✅ Open success screen instead of only Toast
+        val intent = Intent(requireContext(), SuccessActivity::class.java)
+        startActivity(intent)
     }
+
 
     private fun uploadReportToServer(report: Report) {
         val file = File(report.photoPath)
